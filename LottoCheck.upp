@@ -1,0 +1,13 @@
+description "Check bets against Lottery\377";
+
+uses
+	CtrlLib;
+
+file
+	LottoCheck.h,
+	main.cpp,
+	LottoCheck.lay;
+
+mainconfig
+	"" = "GUI";
+

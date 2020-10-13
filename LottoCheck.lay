@@ -1,0 +1,17 @@
+LAYOUT(LottoCheckLayout, 304, 292)
+	ITEM(LabelBox, dv___0, SetLabel(t_("Numbers")).LeftPosZ(4, 240).TopPosZ(4, 40))
+	ITEM(EditInt, txtFirst, LeftPosZ(8, 32).TopPosZ(20, 19))
+	ITEM(EditInt, txtSecond, LeftPosZ(48, 32).TopPosZ(20, 19))
+	ITEM(EditInt, txtThird, LeftPosZ(88, 32).TopPosZ(20, 19))
+	ITEM(EditInt, txtFourth, LeftPosZ(128, 32).TopPosZ(20, 19))
+	ITEM(EditInt, txtFifth, LeftPosZ(168, 32).TopPosZ(20, 19))
+	ITEM(EditInt, txtSixth, LeftPosZ(208, 32).TopPosZ(20, 19))
+	ITEM(EditInt, txtBonus, LeftPosZ(260, 32).TopPosZ(20, 19))
+	ITEM(LabelBox, dv___8, SetLabel(t_("Bonus")).LeftPosZ(252, 48).TopPosZ(4, 40))
+	ITEM(ArrayCtrl, arrBets, LeftPosZ(4, 296).TopPosZ(48, 200))
+	ITEM(Button, btnCheck, SetLabel(t_("Check New")).LeftPosZ(4, 68).TopPosZ(256, 28))
+	ITEM(Button, btnSave, SetLabel(t_("Save Latest")).HSizePosZ(80, 156).TopPosZ(256, 28))
+	ITEM(Button, btnLast10, SetLabel(t_("Last 10")).LeftPosZ(156, 68).TopPosZ(256, 28))
+	ITEM(Button, btnClose, SetLabel(t_("Close")).LeftPosZ(232, 68).TopPosZ(256, 28))
+END_LAYOUT
+
