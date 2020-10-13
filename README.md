@@ -1,1 +1,3 @@
-# LottoCheck
+Just a fun little program to see how a conversion from python / wxwidgets would go to Ultimate++...
+
+Check out the cross-platform libraries and code editor at https://www.ultimatepp.org/
