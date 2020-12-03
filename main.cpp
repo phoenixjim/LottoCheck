@@ -156,7 +156,7 @@ void	LottoCheck::Last()
     
     auto w = GetCsvLine(oldwinners, ',', CHARSET_DEFAULT);
     String date = w[0];
-    int matches = 0;
+    int matches = 0, bonusmatches = 0;
     bool Winner = false;
     int winners[10][7], i = 0;
     while (i < 10) {
@@ -167,7 +167,8 @@ void	LottoCheck::Last()
 				for (int z = 1; z < 8; z++) // each member of newwinners
 				{
 					if ((int)arrBets.GetColumn(x, y) == StrInt(w[z])) {
-						matches += 1;
+						if (z < 7)	matches += 1;
+						else bonusmatches = 1;
 						break;
 					}
 				}
@@ -175,7 +176,7 @@ void	LottoCheck::Last()
 			if (matches >= 3)
 			{
 				Winner = true;
-				if (matches > 5) {
+				if (matches > 5 || (matches == 5 && bonusmatches == 1)) {
 					// for (int c = 0; c < 6; c++) arrBets.Set(x, c, Red); //.GridColor(Red);
 					PromptOK("It's HUGE!");
 				}
@@ -188,7 +189,7 @@ void	LottoCheck::Last()
 					PromptOK("Looks like a winner :)");
 				}
 			}
-			matches = 0;
+			matches = bonusmatches = 0;
 		}
 	w = GetCsvLine(oldwinners, ',', CHARSET_DEFAULT);
 	i++;
